@@ -2,19 +2,28 @@ class Youtube1{
 
   public String search(String movieName){
     System.out.println("invoking search movieName:"+movieName);
-    String meassage=null;
-    if(meassage!=movieName){
-	  meassage="searched movie Name is available:"+movieName;
+    String message = null;
+	
+	boolean islogin =login("Impana","Impu@2005");
+	if(islogin){
+		System.out.println("login successfully");
+    if(movieName != null){
+	  message= "searched movie Name is available:" + movieName;
     }
-    return meassage;
+	
+	}else{
+		message = "invalid userName and psw";
+	}
+	
+    return message;
   }
   public String search(String movieName,String heroName){
     System.out.println("invoking search movieName:"+movieName+"and heroName:"+heroName);
-    String meassage=null;
-	 if(meassage!=movieName && meassage!=heroName){
-	  meassage="searched movie Name:"+movieName+"and hero Name:"+heroName+" is available";
+    String message=null;
+	 if(message!=movieName && message!=heroName){
+	  message="searched movie Name:"+movieName+"and hero Name:"+heroName+" is available";
     }
-    return meassage;
+    return message;
   }
   public boolean login(String userName,String psw){
 	  System.out.println("invoking login using userName:"+userName+" and psw:"+psw);

@@ -1,19 +1,17 @@
 class PrinterRunner{
-public static void main(String[] page){
-	System.out.println("----First Time Method Call----");
-	boolean printerStatus = Printer.onOrOff();
-	System.out.println("Main Method Printer Status:"+printerStatus);
-	
-	System.out.println("----Second Time Method Call----");
-	Printer.onOrOff();
-	
-	System.out.println("----Third Time Method Call----");
-	Printer.onOrOff();
-	
-	System.out.println("----Fourth Time Method Call----");
-	Printer.onOrOff();
-	
-	System.out.println("----Fifth Time Method Call----");
-	Printer.onOrOff();
+	public static void main(String[]args){
+		Printer ref=new Printer("Canon","Laser",9000,10,"black",true);
+		Printer refl =new Printer();
+		ref.brand="Canon";
+		ref.type="Laser";
+		ref.price=8000;
+		ref.speed=20;
+		ref.color="White";
+		ref.wifi=true;
+		ref.display();
+	}
 }
-}
+
+
+		
+	

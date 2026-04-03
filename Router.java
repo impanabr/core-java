@@ -1,22 +1,25 @@
 class Router{
-static boolean isOn;
-static String brand="TP-Link";
-static int maxDevices=10;
-static int currentDevices=0;
-
-public static boolean onOrOff(){
 	
-System.out.println("OnOrOff method started");
-if(isOn==false){
-	isOn=true;
-System.out.println("Router is ON:"+ isOn);
+String brand;
+String model;
+double speed;
+int antennas;
+double price;
+boolean dualBrand;
+
+public Router(String brand,String model,double speed,int antennas,double price,boolean dualBrand){
+	System.out.println("Router details with parameter:"+brand+","+model+","+speed+","+antennas+","+price+","+dualBrand);
 }
-else{
-	isOn=false;
-System.out.println("Router is OFF:"+ isOn);
+public Router(){
+	System.out.println("default constructor");
 }
-System.out.println("onOrOff method ended");
-return isOn;
+
+public void display(){
+	System.out.println("Router Brand:"+brand);
+	System.out.println("Router Model:"+model);	
+	System.out.println("Router Speed:"+speed);
+    System.out.println("Router Antennas:"+antennas);
+	System.out.println("Router Price:"+price);
+	System.out.println("Router DualBrand:"+dualBrand);
 }
 }
- 

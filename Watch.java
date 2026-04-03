@@ -1,12 +1,24 @@
 class Watch{
-public static void main(String[] brand){
-int size=9;
-float price=2999.99f;
-long phoneNumber=7904536787L;
-double rating=4.5;
-System.out.println("Watch Size:"+size);
-System.out.println("Watch Price:"+price);
-System.out.println("Phone Number:"+phoneNumber);
-System.out.println("Product Rating:"+rating);
+String brand;
+String type;
+String  color;
+double price;
+int bateryLife;
+boolean waterproof;
+
+public Watch(String brand,String type,String color,double price,int bateryLife,boolean waterproof){
+	System.out.println("Watch details with parameter:"+brand+","+type+","+color+","+price+","+bateryLife+","+waterproof);
+}
+public Watch(){
+	System.out.println("default constructor");
+}
+
+public void display(){
+	System.out.println("Watch Brand:"+brand);
+	System.out.println("Watch Type:"+type);
+	System.out.println("Watch Color:"+color);
+	System.out.println("Watch Price:"+price);
+	System.out.println("Watch BateryLife:"+bateryLife);
+	System.out.println("Watch WaterProof:"+waterproof);
 }
 }

@@ -1,16 +1,13 @@
 class BusRunner{
-
-public static void main(String[] people){
-Bus.seatingCapacity=50;
-Bus.rating=4.5f;
-Bus.price=25000000.50;
-Bus.contactNumber=6789090854L;
-Bus.brand="Volvo";
-
-System.out.println("seatingCapacity:"+Bus.seatingCapacity);
-System.out.println("rating:"+Bus.rating);
-System.out.println("price:"+Bus.price);
-System.out.println("contactNumber:"+Bus.contactNumber);
-System.out.println("brand:"+Bus.brand);
+	public static void main(String[]args){
+		Bus ref=new Bus("KSRTC Exopress","KA01AB1234","Bangalore","Mysore",250.50,30);
+		ref.busName="KSRTC Express";
+		ref.busNumber="KA01AB1234";
+		ref.source="Bangalore";
+		ref.destination="Mysore";
+		ref.ticketPrice=250.50;
+		ref.capacity=50;
+		ref.display();
+	}
 }
-}
+

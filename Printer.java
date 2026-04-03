@@ -1,22 +1,24 @@
 class Printer{
-static boolean isOn;
-static String brand="HP";
-static int maxPages=100;
-static int printedPages=0;
+String brand;
+String type;
+double price;
+int speed;
+String color;
+boolean wifi;
 
-public static boolean onOrOff(){
-	
-System.out.println("OnOrOff method started");
-if(isOn==false){
-	isOn=true;
-System.out.println("AC is ON:"+ isOn);
+public Printer(String brand,String type,double price,int speed,String color,boolean wifi){
+	System.out.println("Printer details with parameter:"+brand+","+type+","+price+","+speed+","+color+","+wifi);
 }
-else{
-	isOn=false;
-System.out.println("AC is OFF:"+ isOn);
+public Printer(){
+	System.out.println("default constructor");
 }
-System.out.println("onOrOff method ended");
-return isOn;
+
+public void display(){
+	System.out.println("Printer Brand:"+brand);
+	System.out.println("Printer Type:"+type);
+	System.out.println("Printer Price:"+price);
+	System.out.println("Printer Speed:"+speed);
+	System.out.println("Printer Color:"+color);
+	System.out.println("Printer Wifi:"+wifi);
 }
 }
- 

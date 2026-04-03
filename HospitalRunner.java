@@ -1,17 +1,13 @@
 class HospitalRunner{
-
-public static void main(String[] nurse){
-Hospital.totalBeds=250;
-Hospital.rating=4.5f;
-Hospital.contactNumber=9076543210L;
-Hospital.emergencyAvailable=true;
-Hospital.hospitalName="CityCare";
-
-System.out.println("totalBeds:"+Hospital.totalBeds);
-System.out.println("rating:"+Hospital.rating);
-System.out.println("contactNumber:"+Hospital.contactNumber);
-System.out.println("emergencyAvailable:"+Hospital.emergencyAvailable);
-System.out.println("hospitalName:"+Hospital.hospitalName);
+public static void main(String[]args){
+	Hospital ref=new Hospital("Apollo","Mysore",60,100,"Cardiology",4.2);
+		Hospital refl=new Hospital();
+		ref.hospitalName="Apollo";
+		ref.location="Bangalore";
+		ref.doctors=50;
+		ref.beds=200;
+		ref.speciality="Cardiology";
+		ref.rating=4.7;
+		ref.display();
+	}
 }
-}
-
