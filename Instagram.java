@@ -1,17 +1,16 @@
 class Instagram{
-public static String validateAndRegister(long mobileNumber,String psw,String birthday,String fullName,String userName){
-	System.out.println("validateAndRegister method is started");
-	String registerStatus = null;
-	if(mobileNumber != 0 && psw != null && birthday != null && fullName != null && userName != null){
-		if(psw.length()>0 && fullName.length()>0 && userName.length()>0){
-			registerStatus = "Thank you" +fullName + "Registered Successfuly";
-		}else{
-			registerStatus ="Please check the length of psw,FullName,UserName";
-		}
-	}else{
-		registerStatus ="Please enter the valid data";
-	} 
-	System.out.println("validateAndRegister method is ended");
-	return registerStatus;
+	public void login(String facebook){
+	System.out.println("Invoking login using FaceBook:"+facebook);
+	}
+    public void login(String userName,String psw){
+	System.out.println("Invoking login using user name "+userName+" and "+"psw:"+psw);
+	}
+	/*
+	public void login(String email,String psw){
+	System.out.println("Invoking login using email ID "+email+" and "+"psw:"+psw);
+	}*/
+	public void login(long pnum,String psw){
+	System.out.println("Invoking login using phone Number "+pnum+" and "+"psw:"+psw);
+	}
 }
-}
+
