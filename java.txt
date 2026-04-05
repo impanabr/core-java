@@ -1,0 +1,38 @@
+what is java?
+java is a high-level language and its secure and object-oriented program and its used to develop the software application.
+
+explain how java file executions?
+create new folder and open notepad++ type some code save it then right click write javac space classname.java then enter compiler is done now enter java space classname click enter the code will run.
+
+what is datatype?explain types of datatype.
+datatype can store the value in single variable.
+there are 8 datatype;
+*int(used for intilazed the values);
+*float(used for intilazed the value for integer);
+*double(used for the)
+*short(the datatype is used for short values);
+*long(the datatype is used for long values);
+*char(they can collect only single characterstics);
+*boolean(they have only two value like true and false);
+*string(string is collect of sequence of characterstics);
+
+what is variable?types of variable.
+variable can used to hold or store the values in the variable.
+there are four types;
+*local variable(it used to declare inside the body and outside the class);
+*global variable(it used to declare inside the class and outside the body);
+*static variable(it used only static keywords);
+*parameterized(it used inside the method and pass in a class);
+
+what is array?
+array is collection of homogenous element.and it also stored multipl-value in a single variable.
+
+what is method?types of method.
+method is a block of code tp perform the specific task.
+there are 2 types;
+*user-defined
+*pre-defined
+
+what is constructor?
+constructor is used to create the class.
+
