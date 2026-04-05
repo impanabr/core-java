@@ -1,5 +1,4 @@
 class HockeyTeam {
-
     String teamName;
     String captainName;
     static int noOfPlayers = 11;
@@ -9,15 +8,13 @@ class HockeyTeam {
 
     public HockeyTeam() {
     }
-
-    public HockeyTeam(String teamName, String captainName, String coachName, String country, String jerseyColor) {
+    public HockeyTeam(String teamName,String captainName,String coachName,String country,String jerseyColor) {
         this.teamName = teamName;
         this.captainName = captainName;
         this.coachName = coachName;
         this.country = country;
         this.jerseyColor = jerseyColor;
     }
-
     public void display() {
         System.out.println("Team Name: " + teamName);
         System.out.println("Captain: " + captainName);
