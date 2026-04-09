@@ -1,27 +1,20 @@
 class AmazonRunner {
-	
+
     public static void main(String[] args) {
 
-        Amazon a1 = new Amazon();
+        Amazon amazon = new Amazon();
 
-        double re = a1.getProductPriceByName("Book");
-        System.out.println(re);
+        String product = "mobile";
+        int quantity = 2;
+        double discount = 15;
 
-        re = a1.getProductPriceByName("Bag");
-        System.out.println(re);
+        double price = amazon.getPriceByProductName(product);
+        double total = amazon.getTotalAmountByPriceAndQuantity(price, quantity);
+        double finalAmount = amazon.applyDiscount(total, discount);
 
-        re = a1.getProductPriceByName("Watch");
-        System.out.println(re);
-
-        re = a1.getProductPriceByName("Shoes");
-        System.out.println(re);
-
-        re = a1.getProductPriceByName("Headphones");
-        System.out.println(re);
-
-        System.out.println("-------------------------");
-
-        re = a1.getTotalAmountByPriceQuantityAndDiscount(500, 2, 10);
-        System.out.println(re);
+        System.out.println("Product: " + product);
+        System.out.println("Quantity: " + quantity);
+        System.out.println("Total Amount: " + total);
+        System.out.println("Final Amount: " + finalAmount);
     }
 }

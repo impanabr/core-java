@@ -2,26 +2,19 @@ class MyntraRunner {
 
     public static void main(String[] args) {
 
-        Myntra m1 = new Myntra();
+        Myntra myntra = new Myntra();
 
-        double re = m1.getClothPriceByName("Shirt");
-        System.out.println(re);
+        String product = "jeans";
+        int quantity = 2;
+        double discount = 15;
 
-        re = m1.getClothPriceByName("Jeans");
-        System.out.println(re);
+        double price = myntra.getPriceByProductName(product);
+        double total = myntra.getTotalAmount(price, quantity);
+        double finalAmount = myntra.applyDiscount(total, discount);
 
-        re = m1.getClothPriceByName("Jacket");
-        System.out.println(re);
-
-        re = m1.getClothPriceByName("T-Shirt");
-        System.out.println(re);
-
-        re = m1.getClothPriceByName("Kurta");
-        System.out.println(re);
-
-        System.out.println("-------------------------");
-
-        re = m1.getTotalAmountByPriceQuantityAndDiscount(1000, 3, 20);
-        System.out.println(re);
+        System.out.println("Product: " + product);
+        System.out.println("Quantity: " + quantity);
+        System.out.println("Total: " + total);
+        System.out.println("Final Amount: " + finalAmount);
     }
 }

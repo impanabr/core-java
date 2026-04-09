@@ -1,26 +1,28 @@
 class Movie {
 
-    public double getTicketPriceBySeatType(String seatType) {
+    public double getPriceByMovieName(String movieName) {
         double price = 0.0;
 
-        if (seatType.equals("Gold")) {
-            price = 300;
-        } else if (seatType.equals("Silver")) {
+        if ("kgf".equals(movieName)) {
             price = 200;
-        } else if (seatType.equals("Platinum")) {
-            price = 500;
-        } else if (seatType.equals("Balcony")) {
-            price = 250;
-        } else if (seatType.equals("Recliner")) {
-            price = 600;
+        } else if ("rrr".equals(movieName)) {
+            price = 180;
+        } else if ("jawan".equals(movieName)) {
+            price = 220;
+        } else if ("leo".equals(movieName)) {
+            price = 210;
+        } else if ("salaar".equals(movieName)) {
+            price = 230;
         }
 
         return price;
     }
 
-    public double getTotalAmountByPriceQuantityAndDiscount(double price, int tickets, double discount) {
-        double total = price * tickets;
-        double discountAmount = total * (discount / 100);
-        return total - discountAmount;
+    public double getTotalAmount(double price, int quantity) {
+        return price * quantity;
+    }
+
+    public double applyDiscount(double total, double discount) {
+        return total - (total * discount / 100);
     }
 }

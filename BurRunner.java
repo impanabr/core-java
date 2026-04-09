@@ -2,26 +2,19 @@ class BusRunner {
 
     public static void main(String[] args) {
 
-        Bus b1 = new Bus();
+        Bus bus = new Bus();
 
-        double re = b1.getTicketPrice("Sleeper");
-        System.out.println(re);
+        String route = "bangalore-mysore";
+        int seats = 2;
+        double discount = 10;
 
-        re = b1.getTicketPrice("AC");
-        System.out.println(re);
+        double price = bus.getPriceByRoute(route);
+        double total = bus.getTotalAmount(price, seats);
+        double finalAmount = bus.applyDiscount(total, discount);
 
-        re = b1.getTicketPrice("Non-AC");
-        System.out.println(re);
-
-        re = b1.getTicketPrice("Semi-Sleeper");
-        System.out.println(re);
-
-        re = b1.getTicketPrice("Luxury");
-        System.out.println(re);
-
-        System.out.println("-------------------------");
-
-        re = b1.getFinalFare(800, 2, 10);
-        System.out.println(re);
+        System.out.println("Route: " + route);
+        System.out.println("Seats: " + seats);
+        System.out.println("Total: " + total);
+        System.out.println("Final Amount: " + finalAmount);
     }
 }

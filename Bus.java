@@ -1,26 +1,28 @@
 class Bus {
 
-    public double getTicketPriceByType(String type) {
+    public double getPriceByRoute(String route) {
         double price = 0.0;
 
-        if (type.equals("Sleeper")) {
-            price = 800;
-        } else if (type.equals("AC")) {
-            price = 1200;
-        } else if (type.equals("Non-AC")) {
-            price = 500;
-        } else if (type.equals("Semi-Sleeper")) {
-            price = 900;
-        } else if (type.equals("Luxury")) {
+        if ("bangalore-mysore".equals(route)) {
+            price = 300;
+        } else if ("bangalore-hubli".equals(route)) {
+            price = 600;
+        } else if ("bangalore-delhi".equals(route)) {
             price = 1500;
+        } else if ("mysore-mangalore".equals(route)) {
+            price = 500;
+        } else if ("hubli-goa".equals(route)) {
+            price = 700;
         }
 
         return price;
     }
 
-    public double getTotalAmountByPriceQuantityAndDiscount(double price, int seats, double discount) {
-        double total = price * seats;
-        double discountAmount = total * (discount / 100);
-        return total - discountAmount;
+    public double getTotalAmount(double price, int seats) {
+        return price * seats;
+    }
+
+    public double applyDiscount(double total, double discount) {
+        return total - (total * discount / 100);
     }
 }

@@ -2,26 +2,19 @@ class ZomatoRunner {
 
     public static void main(String[] args) {
 
-        Zomato z1 = new Zomato();
+        Zomato zomato = new Zomato();
 
-        double re = z1.getFoodPriceByFoodName("Biryani");
-        System.out.println(re);
+        String foodName = "pizza";
+        int quantity = 2;
+        double discount = 10;
 
-        re = z1.getFoodPriceByFoodName("Aloo Parata");
-        System.out.println(re);
+        double price = zomato.getPriceByFoodName(foodName);
+        double total = zomato.getTotalAmountByPriceAndQuantity(price, quantity);
+        double finalAmount = zomato.applyDiscount(total, discount);
 
-        re = z1.getFoodPriceByFoodName("Paneer");
-        System.out.println(re);
-
-        re = z1.getFoodPriceByFoodName("Chapathi");
-        System.out.println(re);
-
-        re = z1.getFoodPriceByFoodName("Ghee Rice");
-        System.out.println(re);
-
-        System.out.println("-------------------------");
-
-        re = z1.getTotalAmountByPriceQuantityAndDiscount(100, 3, 10);
-        System.out.println(re);
+        System.out.println("Food: " + foodName);
+        System.out.println("Quantity: " + quantity);
+        System.out.println("Total Amount: " + total);
+        System.out.println("Final Amount: " + finalAmount);
     }
 }

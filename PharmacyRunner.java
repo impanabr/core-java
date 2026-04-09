@@ -2,26 +2,19 @@ class PharmacyRunner {
 
     public static void main(String[] args) {
 
-        Pharmacy p1 = new Pharmacy();
+        Pharmacy pharmacy = new Pharmacy();
 
-        double re = p1.getMedicinePrice("Paracetamol");
-        System.out.println(re);
+        String medicine = "paracetamol";
+        int quantity = 3;
+        double discount = 5;
 
-        re = p1.getMedicinePrice("Dolo");
-        System.out.println(re);
+        double price = pharmacy.getPriceByMedicineName(medicine);
+        double total = pharmacy.getTotalAmount(price, quantity);
+        double finalAmount = pharmacy.applyDiscount(total, discount);
 
-        re = p1.getMedicinePrice("Crocin");
-        System.out.println(re);
-
-        re = p1.getMedicinePrice("Aspirin");
-        System.out.println(re);
-
-        re = p1.getMedicinePrice("Vitamin C");
-        System.out.println(re);
-
-        System.out.println("-------------------------");
-
-        re = p1.getBillAmount(100, 5, 5);
-        System.out.println(re);
+        System.out.println("Medicine: " + medicine);
+        System.out.println("Quantity: " + quantity);
+        System.out.println("Total Amount: " + total);
+        System.out.println("Final Amount: " + finalAmount);
     }
 }

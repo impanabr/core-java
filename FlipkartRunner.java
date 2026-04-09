@@ -2,26 +2,19 @@ class FlipkartRunner {
 
     public static void main(String[] args) {
 
-        Flipkart f1 = new Flipkart();
+        Flipkart flipkart = new Flipkart();
 
-        double re = f1.getItemPriceByName("Mobile");
-        System.out.println(re);
+        String product = "tv";
+        int quantity = 1;
+        double discount = 10;
 
-        re = f1.getItemPriceByName("Laptop");
-        System.out.println(re);
+        double price = flipkart.getPriceByProductName(product);
+        double total = flipkart.getTotalAmountByPriceAndQuantity(price, quantity);
+        double finalAmount = flipkart.applyDiscount(total, discount);
 
-        re = f1.getItemPriceByName("TV");
-        System.out.println(re);
-
-        re = f1.getItemPriceByName("Refrigerator");
-        System.out.println(re);
-
-        re = f1.getItemPriceByName("Washing Machine");
-        System.out.println(re);
-
-        System.out.println("-------------------------");
-
-        re = f1.getTotalAmountByPriceQuantityAndDiscount(20000, 2, 10);
-        System.out.println(re);
+        System.out.println("Product: " + product);
+        System.out.println("Quantity: " + quantity);
+        System.out.println("Total Amount: " + total);
+        System.out.println("Final Amount: " + finalAmount);
     }
 }

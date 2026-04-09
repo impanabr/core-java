@@ -2,26 +2,19 @@ class HotelRunner {
 
     public static void main(String[] args) {
 
-        Hotel h1 = new Hotel();
+        Hotel hotel = new Hotel();
 
-        double re = h1.getRoomPrice("Single");
-        System.out.println(re);
+        String foodName = "dosa";
+        int quantity = 3;
+        double discount = 10;
 
-        re = h1.getRoomPrice("Double");
-        System.out.println(re);
+        double price = hotel.getPriceByFoodName(foodName);
+        double total = hotel.getTotalAmount(price, quantity);
+        double finalAmount = hotel.applyDiscount(total, discount);
 
-        re = h1.getRoomPrice("Suite");
-        System.out.println(re);
-
-        re = h1.getRoomPrice("Deluxe");
-        System.out.println(re);
-
-        re = h1.getRoomPrice("Standard");
-        System.out.println(re);
-
-        System.out.println("-------------------------");
-
-        re = h1.getTotalBill(2000, 3, 15);
-        System.out.println(re);
+        System.out.println("Food: " + foodName);
+        System.out.println("Quantity: " + quantity);
+        System.out.println("Total: " + total);
+        System.out.println("Final Amount: " + finalAmount);
     }
 }

@@ -1,26 +1,34 @@
 class Zomato {
 
-    public double getFoodPriceByFoodName(String foodName) {
+    public double getPriceByFoodName(String foodName) {
+        System.out.println("invoking getPriceByFoodName: " + foodName);
         double price = 0.0;
 
-        if (foodName.equals("Aloo Parata")) {
-            price = 70;
-        } else if (foodName.equals("Fried Rice")) {
-            price = 50;
-        } else if (foodName.equals("Ghee Rice")) {
-            price = 70;
-        } else if (foodName.equals("Paneer")) {
-            price = 100;
-        } else if (foodName.equals("Chole Bhature")) {
+        if ("pizza".equals(foodName)) {
+            price = 150;
+        } else if ("burger".equals(foodName)) {
+            price = 80;
+        } else if ("pasta".equals(foodName)) {
             price = 120;
+        } else if ("sandwich".equals(foodName)) {
+            price = 70;
+        } else if ("noodles".equals(foodName)) {
+            price = 90;
         }
 
+        System.out.println("end of getPriceByFoodName");
         return price;
     }
 
-    public double getTotalAmountByPriceQuantityAndDiscount(double price, int quantity, double discount) {
+    public double getTotalAmountByPriceAndQuantity(double price, int quantity) {
+        System.out.println("invoking getTotalAmountByPriceAndQuantity");
         double total = price * quantity;
-        double discountAmount = total * (discount / 100);
-        return total - discountAmount;
+        System.out.println("end of method");
+        return total;
+    }
+
+    public double applyDiscount(double totalAmount, double discountPercent) {
+        double discount = (totalAmount * discountPercent) / 100;
+        return totalAmount - discount;
     }
 }

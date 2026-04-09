@@ -1,26 +1,28 @@
 class BookStore {
 
-    public double getBookPriceByName(String bookName) {
+    public double getPriceByBookName(String bookName) {
         double price = 0.0;
 
-        if (bookName.equals("Java")) {
-            price = 400;
-        } else if (bookName.equals("Python")) {
-            price = 350;
-        } else if (bookName.equals("C++")) {
-            price = 300;
-        } else if (bookName.equals("Data Structures")) {
-            price = 450;
-        } else if (bookName.equals("Algorithms")) {
+        if ("java".equals(bookName)) {
             price = 500;
+        } else if ("python".equals(bookName)) {
+            price = 450;
+        } else if ("dsa".equals(bookName)) {
+            price = 600;
+        } else if ("dbms".equals(bookName)) {
+            price = 550;
+        } else if ("os".equals(bookName)) {
+            price = 400;
         }
 
         return price;
     }
 
-    public double getTotalAmountByPriceQuantityAndDiscount(double price, int quantity, double discount) {
-        double total = price * quantity;
-        double discountAmount = total * (discount / 100);
-        return total - discountAmount;
+    public double getTotalAmount(double price, int quantity) {
+        return price * quantity;
+    }
+
+    public double applyDiscount(double total, double discount) {
+        return total - (total * discount / 100);
     }
 }

@@ -1,26 +1,32 @@
 class Amazon {
 
-    public double getProductPriceByName(String productName) {
+    public double getPriceByProductName(String productName) {
+        System.out.println("invoking getPriceByProductName: " + productName);
         double price = 0.0;
 
-        if (productName.equals("Book")) {
-            price = 200;
-        } else if (productName.equals("Bag")) {
-            price = 500;
-        } else if (productName.equals("Watch")) {
-            price = 1000;
-        } else if (productName.equals("Shoes")) {
-            price = 1500;
-        } else if (productName.equals("Headphones")) {
+        if ("mobile".equals(productName)) {
+            price = 15000;
+        } else if ("laptop".equals(productName)) {
+            price = 50000;
+        } else if ("headphones".equals(productName)) {
             price = 2000;
+        } else if ("watch".equals(productName)) {
+            price = 1500;
+        } else if ("keyboard".equals(productName)) {
+            price = 800;
         }
 
+        System.out.println("end of method");
         return price;
     }
 
-    public double getTotalAmountByPriceQuantityAndDiscount(double price, int quantity, double discount) {
+    public double getTotalAmountByPriceAndQuantity(double price, int quantity) {
         double total = price * quantity;
-        double discountAmount = total * (discount / 100);
-        return total - discountAmount;
+        return total;
+    }
+
+    public double applyDiscount(double totalAmount, double discountPercent) {
+        double discount = (totalAmount * discountPercent) / 100;
+        return totalAmount - discount;
     }
 }

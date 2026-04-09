@@ -1,26 +1,28 @@
 class Myntra {
 
-    public double getClothPriceByName(String clothName) {
+    public double getPriceByProductName(String productName) {
         double price = 0.0;
 
-        if (clothName.equals("Shirt")) {
-            price = 800;
-        } else if (clothName.equals("Jeans")) {
-            price = 1500;
-        } else if (clothName.equals("Jacket")) {
-            price = 3000;
-        } else if (clothName.equals("T-Shirt")) {
-            price = 500;
-        } else if (clothName.equals("Kurta")) {
-            price = 1200;
+        if ("shirt".equals(productName)) {
+            price = 999;
+        } else if ("jeans".equals(productName)) {
+            price = 1499;
+        } else if ("tshirt".equals(productName)) {
+            price = 599;
+        } else if ("jacket".equals(productName)) {
+            price = 1999;
+        } else if ("shoes".equals(productName)) {
+            price = 2499;
         }
 
         return price;
     }
 
-    public double getTotalAmountByPriceQuantityAndDiscount(double price, int quantity, double discount) {
-        double total = price * quantity;
-        double discountAmount = total * (discount / 100);
-        return total - discountAmount;
+    public double getTotalAmount(double price, int quantity) {
+        return price * quantity;
+    }
+
+    public double applyDiscount(double total, double discount) {
+        return total - (total * discount / 100);
     }
 }

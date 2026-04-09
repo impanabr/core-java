@@ -2,26 +2,19 @@ class SwiggyRunner {
 
     public static void main(String[] args) {
 
-        Swiggy s1 = new Swiggy();
+        Swiggy swiggy = new Swiggy();
 
-        double re = s1.getFoodPriceByFoodName("Dosa");
-        System.out.println(re);
+        String foodName = "biriyani";
+        int quantity = 2;
+        double discountPercent = 10; 
+		
+        double price = swiggy.getPriceByFoodName(foodName);
+        double totalAmount = swiggy.getTotalAmountByPriceAndQuantity(price, quantity);
+        double finalAmount = swiggy.applyDiscount(totalAmount, discountPercent);
 
-        re = s1.getFoodPriceByFoodName("Idli");
-        System.out.println(re);
-
-        re = s1.getFoodPriceByFoodName("Vada");
-        System.out.println(re);
-
-        re = s1.getFoodPriceByFoodName("Upma");
-        System.out.println(re);
-
-        re = s1.getFoodPriceByFoodName("Poori");
-        System.out.println(re);
-
-        System.out.println("-------------------------");
-
-        re = s1.getTotalAmountByPriceQuantityAndDiscount(50, 2, 5);
-        System.out.println(re);
+        System.out.println("Food: " + foodName);
+        System.out.println("Quantity: " + quantity);
+        System.out.println("Total Amount: " + totalAmount);
+        System.out.println("Final Amount after Discount: " + finalAmount);
     }
 }

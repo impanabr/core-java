@@ -1,26 +1,29 @@
 class Hotel {
 
-    public double getRoomPriceByType(String roomType) {
+    public double getPriceByFoodName(String foodName) {
+        System.out.println("Hotel item: " + foodName);
         double price = 0.0;
 
-        if (roomType.equals("Single")) {
-            price = 1000;
-        } else if (roomType.equals("Double")) {
-            price = 2000;
-        } else if (roomType.equals("Suite")) {
-            price = 5000;
-        } else if (roomType.equals("Deluxe")) {
-            price = 3000;
-        } else if (roomType.equals("Luxury")) {
-            price = 7000;
+        if ("idli".equals(foodName)) {
+            price = 40;
+        } else if ("dosa".equals(foodName)) {
+            price = 60;
+        } else if ("meals".equals(foodName)) {
+            price = 120;
+        } else if ("chapati".equals(foodName)) {
+            price = 50;
+        } else if ("curd rice".equals(foodName)) {
+            price = 70;
         }
 
         return price;
     }
 
-    public double getTotalAmountByPriceQuantityAndDiscount(double price, int days, double discount) {
-        double total = price * days;
-        double discountAmount = total * (discount / 100);
-        return total - discountAmount;
+    public double getTotalAmount(double price, int quantity) {
+        return price * quantity;
+    }
+
+    public double applyDiscount(double total, double discount) {
+        return total - (total * discount / 100);
     }
 }
